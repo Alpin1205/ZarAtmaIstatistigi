@@ -7,6 +7,7 @@ ortbinlik = 0
 değil = 0
 uçukb = 0
 uçukk = 0
+kere = 0
 
 for i in range(0,1000):
     for b in range(0,10):
@@ -16,6 +17,7 @@ for i in range(0,1000):
         binlik = 0
         print(str(i) + str(b) +". defa ortalaması " +str(x))
         ortbinlik += x
+        kere += 1
         if x <= 3.59 and x >= 3.50:
             üçelli += 1
         if x <= 3.55 and x >= 3.46:
@@ -26,9 +28,11 @@ for i in range(0,1000):
             uçukb += 1
         else:
             değil += 1
+ortbinlik = ortbinlik / kere
 
 print("""
-Ortalama Sonucu: 
+Ortalama Sonucu:
+    Toplam ortalama: """+ str(ortbinlik) +""" 
     3.59 ile 3.50 arasındakiler: """+ str(üçelli) +"""
     3.55 ile 3.46 arasındakiler: """+ str(üçorta) +"""
     3 küsür olup şartı karşılamayanlar: """+ str(değil) +"""
